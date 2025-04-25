@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Confetti Script -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <!-- Floating Balloons -->
+    <div class="floating-balloon balloon1"></div>
+    <div class="floating-balloon balloon2"></div>
+    <div class="floating-balloon balloon3"></div>
+    <div class="floating-balloon balloon4"></div>
+    <div class="floating-balloon balloon5"></div>
+
+    <!-- Birthday Card -->
+    <div class="card">
+      <div class="outside">
+        <div class="front">
+          <p>Happy Birthday</p>
+          <div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle"></div>
+          </div>
+        </div>
+        <div class="back"></div>
+      </div>
+      <div class="inside">
+        <p>Hey Vaidehi, I hope your day is as amazing as you are! Wishing you a birthday filled with love, laughter, and all the happiness you deserve. Enjoy every moment of it! 🎉🎂😊</p>
+        <h1>&#127874;</h1> <!-- 🎂 cake emoji -->
+      </div>
+    </div>
+
+    <!-- Music -->
+    <audio autoplay loop>
+      <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Confetti Effect -->
+    <script>
+      setInterval(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { x:1.0 ,y: 1.0 }
+        });
+      }, 2000);
+    </script>
+    <script>
+      setInterval(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { x:0 ,y:0 }
+        });
+      }, 2000);
+    </script>
+  <div id="btn-container" style="display: none; text-align: right; padding: 20px;">
+    <a class="btn" href="index.html">Continue-></a>		
+  </div>
+  <script>
+    setTimeout(() => {
+      document.getElementById("btn-container").style.display = "block";
+    }, 5000); // 5 seconds
+  </script>
+  </body>
+</html>
